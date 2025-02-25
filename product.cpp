@@ -10,7 +10,7 @@ Product::Product(const std::string category, const std::string name, double pric
     qty_(qty),
     category_(category)
 {
-
+  //cout << "making product! " << name_ << " " << price_ << " " << qty_ << " " << category << endl;
 }
 
 Product::~Product()
@@ -50,6 +50,7 @@ bool Product::isMatch(std::vector<std::string>& searchTerms) const
 
 void Product::dump(std::ostream& os) const
 {
+  cout << "dumping product " << endl;
     os << category_ << "\n" << name_ << "\n" << price_ << "\n" << qty_ << endl;
 }
 
